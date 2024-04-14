@@ -11,7 +11,6 @@ export const createUser = async (user: CreateUserParams) => {
   try {
     await connectToDB();
     const newUser = await User.create(user);
-    if (!user) throw new Error("User not found");
     return JSON.parse(JSON.stringify(user));
   } catch (error) {
     handleError(error);

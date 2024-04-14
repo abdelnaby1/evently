@@ -97,6 +97,6 @@ export function removeKeysFromQuery({
 }
 
 export const handleError = (error: unknown) => {
-  console.error(error);
+  console.error("error in db", error);
   throw new Error(typeof error === "string" ? error : JSON.stringify(error));
 };
